@@ -1,0 +1,17 @@
+server:
+  host: 127.0.0.1
+  port: 8787
+
+model:
+  provider: built_in
+  repo_id: bartowski/SmolLM2-1.7B-Instruct-GGUF
+  filename: SmolLM2-1.7B-Instruct-Q4_K_M.gguf
+  n_ctx: 2048
+
+memory:
+  sqlite_path: F:/dev-test/dialogue-engine/data/dialogue_memory.db
+
+safety:
+  max_output_chars: 2400
+  fallback_intro: "I need a moment to think."
+  fallback_option: "Tell me more."

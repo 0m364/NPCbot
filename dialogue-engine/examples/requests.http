@@ -1,0 +1,26 @@
+### Health
+GET http://127.0.0.1:8787/v1/health
+
+### Write memory
+POST http://127.0.0.1:8787/v1/memory/write
+Content-Type: application/json
+
+{
+  "npc_id": "OutpostGuide",
+  "key": "last_topic",
+  "value": "player asked about tunnel route"
+}
+
+### Generate dialogue
+POST http://127.0.0.1:8787/v1/dialogue/generate
+Content-Type: application/json
+
+{
+  "npc_id": "OutpostGuide",
+  "player_input": "How do I cross the old reactor district safely?",
+  "npc_persona": "Calm, tactical, protective",
+  "world_state": "Power grid unstable and droids active at night",
+  "quest_state": "Player has map fragment A",
+  "tone": "serious but hopeful",
+  "constraints": "Teen-safe, concise, no profanity"
+}
